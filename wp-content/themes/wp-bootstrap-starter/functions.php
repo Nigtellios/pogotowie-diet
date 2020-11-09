@@ -300,3 +300,10 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+
+/* Load ACF PRO Options Page */
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
