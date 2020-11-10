@@ -78,26 +78,26 @@ add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );
 
 /**
  * Add Welcome message to dashboard
- */
-function wp_bootstrap_starter_reminder(){
-        $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
+ */ 
+// function wp_bootstrap_starter_reminder(){
+//         $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
 
-            if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
-                    esc_url( $theme_page_url )
-                );
+//             if(!get_option( 'triggered_welcomet')){
+//                 $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
+//                     esc_url( $theme_page_url )
+//                 );
 
-                printf(
-                    '<div class="notice is-dismissible" style="background-color: #6C2EB9; color: #fff; border-left: none;">
-                        <p>%1$s</p>
-                    </div>',
-                    $message
-                );
-                add_option( 'triggered_welcomet', '1', '', 'yes' );
-            }
+//                 printf(
+//                     '<div class="notice is-dismissible" style="background-color: #6C2EB9; color: #fff; border-left: none;">
+//                         <p>%1$s</p>
+//                     </div>',
+//                     $message
+//                 );
+//                 add_option( 'triggered_welcomet', '1', '', 'yes' );
+//             }
 
-}
-add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
+// }
+// add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -106,55 +106,55 @@ add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
  *
  * @global int $content_width
  */
-function wp_bootstrap_starter_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wp_bootstrap_starter_content_width', 1170 );
-}
-add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
+// function wp_bootstrap_starter_content_width() {
+// 	$GLOBALS['content_width'] = apply_filters( 'wp_bootstrap_starter_content_width', 1170 );
+// }
+// add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function wp_bootstrap_starter_widgets_init() {
-    register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'wp-bootstrap-starter' ),
-        'id'            => 'sidebar-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
-    register_sidebar( array(
-        'name'          => esc_html__( 'Footer 1', 'wp-bootstrap-starter' ),
-        'id'            => 'footer-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
-    register_sidebar( array(
-        'name'          => esc_html__( 'Footer 2', 'wp-bootstrap-starter' ),
-        'id'            => 'footer-2',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
-    register_sidebar( array(
-        'name'          => esc_html__( 'Footer 3', 'wp-bootstrap-starter' ),
-        'id'            => 'footer-3',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
-}
-add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
+// function wp_bootstrap_starter_widgets_init() {
+//     register_sidebar( array(
+//         'name'          => esc_html__( 'Sidebar', 'wp-bootstrap-starter' ),
+//         'id'            => 'sidebar-1',
+//         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+//         'before_widget' => '<section id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</section>',
+//         'before_title'  => '<h3 class="widget-title">',
+//         'after_title'   => '</h3>',
+//     ) );
+//     register_sidebar( array(
+//         'name'          => esc_html__( 'Footer 1', 'wp-bootstrap-starter' ),
+//         'id'            => 'footer-1',
+//         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+//         'before_widget' => '<section id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</section>',
+//         'before_title'  => '<h3 class="widget-title">',
+//         'after_title'   => '</h3>',
+//     ) );
+//     register_sidebar( array(
+//         'name'          => esc_html__( 'Footer 2', 'wp-bootstrap-starter' ),
+//         'id'            => 'footer-2',
+//         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+//         'before_widget' => '<section id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</section>',
+//         'before_title'  => '<h3 class="widget-title">',
+//         'after_title'   => '</h3>',
+//     ) );
+//     register_sidebar( array(
+//         'name'          => esc_html__( 'Footer 3', 'wp-bootstrap-starter' ),
+//         'id'            => 'footer-3',
+//         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+//         'before_widget' => '<section id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</section>',
+//         'before_title'  => '<h3 class="widget-title">',
+//         'after_title'   => '</h3>',
+//     ) );
+// }
+// add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
 
 
 /**
@@ -256,16 +256,16 @@ add_filter( 'wp_resource_hints', 'wp_bootstrap_starter_preload', 10, 2 );
 
 
 
-function wp_bootstrap_starter_password_form() {
-    global $post;
-    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-    $o = '<form action="' . esc_url( home_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-    <div class="d-block mb-3">' . __( "To view this protected post, enter the password below:", "wp-bootstrap-starter" ) . '</div>
-    <div class="form-group form-inline"><label for="' . $label . '" class="mr-2">' . __( "Password:", "wp-bootstrap-starter" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" class="form-control mr-2" /> <input type="submit" name="Submit" value="' . esc_attr__( "Submit", "wp-bootstrap-starter" ) . '" class="btn btn-primary"/></div>
-    </form>';
-    return $o;
-}
-add_filter( 'the_password_form', 'wp_bootstrap_starter_password_form' );
+// function wp_bootstrap_starter_password_form() {
+//     global $post;
+//     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+//     $o = '<form action="' . esc_url( home_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+//     <div class="d-block mb-3">' . __( "To view this protected post, enter the password below:", "wp-bootstrap-starter" ) . '</div>
+//     <div class="form-group form-inline"><label for="' . $label . '" class="mr-2">' . __( "Password:", "wp-bootstrap-starter" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" class="form-control mr-2" /> <input type="submit" name="Submit" value="' . esc_attr__( "Submit", "wp-bootstrap-starter" ) . '" class="btn btn-primary"/></div>
+//     </form>';
+//     return $o;
+// }
+// add_filter( 'the_password_form', 'wp_bootstrap_starter_password_form' );
 
 
 
@@ -300,7 +300,6 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
-
 
 /* Load ACF PRO Options Page */
 
