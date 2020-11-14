@@ -91,6 +91,7 @@ if ( ! function_exists( 'hello_elementor_scripts_styles' ) ) {
 	function hello_elementor_scripts_styles() {
 		$enqueue_basic_style = apply_filters_deprecated( 'elementor_hello_theme_enqueue_style', [ true ], '2.0', 'hello_elementor_enqueue_style' );
 		$min_suffix          = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		
 
 		if ( apply_filters( 'hello_elementor_enqueue_style', $enqueue_basic_style ) ) {
 			wp_enqueue_style(
@@ -109,6 +110,62 @@ if ( ! function_exists( 'hello_elementor_scripts_styles' ) ) {
 				HELLO_ELEMENTOR_VERSION
 			);
 		}
+
+		if ( apply_filters( 'hello_elementor_enqueue_slick1_style', true ) ) {
+			wp_enqueue_style(
+				'hello-elementor-slick1-style',
+				get_template_directory_uri() . '/slick' . '.css',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+
+		if ( apply_filters( 'hello_elementor_enqueue_slick2_style', true ) ) {
+			wp_enqueue_style(
+				'hello-elementor-slick2-style',
+				get_template_directory_uri() . '/slick-theme' . '.css',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+
+		if ( apply_filters( 'hello_elementor_enqueue_additional_style', true ) ) {
+			wp_enqueue_style(
+				'hello-elementor-additional-style',
+				get_template_directory_uri() . '/add' . '.css',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+		
+
+		if ( apply_filters( 'hello_elementor_enqueue_jquery_script', true ) ) {
+			wp_enqueue_script(
+				'jquery',
+				get_template_directory_uri() . '/jquery-3.5.1' . $min_suffix . '.js',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+
+		if ( apply_filters( 'hello_elementor_enqueue_slick_script', true ) ) {
+			wp_enqueue_script(
+				'slick',
+				get_template_directory_uri() . '/slick' . $min_suffix . '.js',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+
+		if ( apply_filters( 'hello_elementor_enqueue_my_script', true ) ) {
+			wp_enqueue_script(
+				'my',
+				get_template_directory_uri() . '/my' . '.js',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+		
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_scripts_styles' );
@@ -184,3 +241,9 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	
 }
+
+// Add Shortcode
+// function cta_shortcode() {
+
+// }
+// add_shortcode( 'cta-slider', 'cta_shortcode' );

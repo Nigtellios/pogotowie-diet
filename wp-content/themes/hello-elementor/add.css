@@ -1,0 +1,264 @@
+.w-90 {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar--mod {
+  position: absolute !important;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.elementor-button-icon svg {
+  width: auto;
+}
+
+.btn > div > div > a {
+max-height: 55px;
+}
+
+.order-btn > div > div > a {
+max-height: 55px;
+}
+
+.underliner::before {
+  content: "";
+  width: 245px;
+  height: 7px;
+  background-color: #35BB4A;
+  position: absolute;
+  margin: 23px 0 0 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.underline-1::before {
+  content: "";
+  width:180px;
+  height: 7px;
+  background-color: #35BB4A;
+  position: absolute;
+  margin: 23px 0 0 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.underline-2::before {
+  content: "";
+  width: 220px;
+  height: 7px;
+  background-color: #35BB4A;
+  position: absolute;
+  margin: 95px 0 0 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.underline-3::before {
+  content: "";
+  width: 240px;
+  height: 7px;
+  background-color: #35BB4A;
+  position: absolute;
+  margin: 25px 0 0 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.underline-4::before {
+  content: "";
+  width: 200px;
+  height: 7px;
+  background-color: #35BB4A;
+  position: absolute;
+  margin: 77px 0 0 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.tile-shadow {
+  filter: drop-shadow(4px 16px 38px #35BB4A);
+}
+
+.map-shadow {
+  filter: drop-shadow(4px 34px 181px rgba(0, 0, 0, 0.07));
+}
+
+.p-150 {
+  padding: 350px 0 150px 0;
+}
+
+.cta-slider {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.cta-slider__item {
+  margin: 20px;
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-slider__item-highlight--shadow {
+  filter: drop-shadow(4px 26px 15px rgba(0,0,0, 0.2));
+}
+
+.cta-slider__calories-header {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.cta-slider__item-calories {
+  max-width: 305px;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-slider__item-calories__item {
+  width: 95px;
+  height: 35px;
+  text-align: center;
+  background: rgba(53, 187, 74, 0.1);
+  border: 1px solid #35BB4A;
+  box-sizing: border-box;
+  border-radius: 11px;
+  color: #35BB4A;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 3px;
+}
+
+.cta-slider__button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  width: 170px;
+  height: 55px;
+  background: #35BB4A;
+  box-shadow: 0px 11px 48px rgba(53, 187, 74, 0.33);
+  border-radius: 9px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cta-slider__button > p {
+  margin: 0 0 0 15px;
+}
+
+.cta-slider__button:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #FFFFFF !important;
+  transition: 0.2s ease-in;
+}
+
+.cta-slider__heading {
+  margin: 20px 0 0 0;
+}
+
+.cta-slider__desc {
+  max-width: 366px;
+  margin: 10px 0 12px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.cta-slider__item-background {
+  z-index: -1;
+  position: absolute;
+  margin: 50px;
+}
+
+.slick-dots li button {
+  background: #CECECE;
+  border-radius: 15px;
+}
+
+.slick-dots li button:before {
+  content: '';
+  background-color: #000000;
+  border-radius: 10px;
+  color: black;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: black;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  background-color: #000000;
+}
+
+.slick-prev, .slick-next {
+  width: 55px;
+  height: 55px;
+  border: 2.5px solid #000000;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  border: 2.5px solid #35BB4A;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  color: #000000;
+}
+
+.slick-next:before {
+  content: url('http://pogotowie-diet.test/wp-content/uploads/2020/11/arrow-right-black.svg');;
+  font-weight: 600;
+  color: #000000;
+}
+
+.slick-next:hover:before {
+  content: url('http://pogotowie-diet.test/wp-content/uploads/2020/11/arrow-right-green.svg');
+  transition: 0.3s ease;
+}
+
+.slick-prev:before {
+  content: url('http://pogotowie-diet.test/wp-content/uploads/2020/11/arrow-left-black.svg');
+  font-weight: 600;
+  color: #000000;
+}
+
+.slick-prev:hover:before {
+  content: url('http://pogotowie-diet.test/wp-content/uploads/2020/11/arrow-left-green.svg');
+  transition: 0.3s ease;
+}
+
+.slick-active .slick-dots li button {
+  background: #000000;
+}
+
+.slick-next {
+  right: -55px;
+}
+
+.slick-prev {
+  left: -55px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 480px) {
+  .btn > div > div > a {
+    max-height: 55px;
+  }
+
+  .order-btn > div > div > a {
+    max-height: 55px;
+  }
+}
