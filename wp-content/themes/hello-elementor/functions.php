@@ -138,11 +138,28 @@ if ( ! function_exists( 'hello_elementor_scripts_styles' ) ) {
 			);
 		}
 		
+		if ( apply_filters( 'hello_elementor_enqueue_bootstrap_style', true ) ) {
+			wp_enqueue_style(
+				'hello-elementor-bootstrap-style',
+				get_template_directory_uri() . '/bootstrap' . $min_suffix . '.css',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
 
 		if ( apply_filters( 'hello_elementor_enqueue_jquery_script', true ) ) {
 			wp_enqueue_script(
 				'jquery',
 				get_template_directory_uri() . '/jquery-3.5.1' . $min_suffix . '.js',
+				[],
+				HELLO_ELEMENTOR_VERSION
+			);
+		}
+
+		if ( apply_filters( 'hello_elementor_enqueue_bootstrap_script', true ) ) {
+			wp_enqueue_script(
+				'bootstrap-script',
+				get_template_directory_uri() . '/bootstrap.bundle' . $min_suffix . '.js',
 				[],
 				HELLO_ELEMENTOR_VERSION
 			);

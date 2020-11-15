@@ -1,3 +1,5 @@
+/* GLOBAL STYLING */
+
 .w-90 {
   max-width: 85%;
   margin-left: auto;
@@ -15,11 +17,11 @@
 }
 
 .btn > div > div > a {
-max-height: 55px;
+  max-height: 55px;
 }
 
 .order-btn > div > div > a {
-max-height: 55px;
+  max-height: 55px;
 }
 
 .underliner::before {
@@ -35,7 +37,7 @@ max-height: 55px;
 
 .underline-1::before {
   content: "";
-  width:180px;
+  width: 180px;
   height: 7px;
   background-color: #35BB4A;
   position: absolute;
@@ -88,6 +90,8 @@ max-height: 55px;
 .p-150 {
   padding: 350px 0 150px 0;
 }
+
+/* CTA SLIDER STYLIN */
 
 .cta-slider {
   max-width: 90%;
@@ -249,6 +253,42 @@ max-height: 55px;
 
 .slick-prev {
   left: -55px;
+}
+
+/* MENU TABS STYLING */
+
+.menu-tabs__position {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.menu-tabs__navigation {
+  max-width: 300px !important;
+}
+
+.menu-tabs__content {
+  max-width: 510px !important;
+}
+
+.menu-tabs__content-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.menu-tabs__content-panel-tab {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.menu-tabs__content-panel-tab-heading {
+
+}
+
+.menu-tabs__content-panel-tab-content {
+
 }
 
 /* MEDIA QUERIES */
