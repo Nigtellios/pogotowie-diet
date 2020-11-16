@@ -29,9 +29,21 @@ jQuery(document).ready(function(){
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
+
+  // jQuery('.map-point-marker').hover(function(){     
+  //   jQuery('.map-point-marker-content').addClass('hover-visible');    
+  // },     
+  // function(){    
+  //   jQuery('.map-point-marker-content').removeClass('hover-visible');     
+  // });
+
+  jQuery('.map-point-marker').hover(function(){     
+    jQuery(this).addClass('hover-visible');    
+  },     
+  function(){    
+    jQuery(this).removeClass('hover-visible');     
+  });
+  
 });

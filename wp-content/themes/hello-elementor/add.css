@@ -1,13 +1,33 @@
 /* GLOBAL STYLING */
 
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
 .w-90 {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
+.p-100 {
+  padding: 100px 0 100px 0;
+}
+
+.p-100-d {
+  padding: 0 0 100px 0;
+}
+
 .navbar--mod {
-  position: absolute !important;
+  position: absolute;
   width: 100%;
   margin: 0 auto 0 auto;
 }
@@ -16,12 +36,47 @@
   width: auto;
 }
 
-.btn > div > div > a {
+.btn-1 > div > div > a {
+  width: 170px;
+  padding: 0;
+  line-height: 47px;
   max-height: 55px;
 }
 
 .order-btn > div > div > a {
+  width: 170px !important;
   max-height: 55px;
+}
+
+
+.cta-btn {
+  width: 170px;
+}
+
+.my-btn {
+  width: 175px;
+  max-height: 55px;
+  font-family: "Barlow", Sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 47px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  background-color: #35BB4A;
+  border-style: solid;
+  border-color: #35BB4A;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 11px 48px 0px rgba(52.99999999999999, 186.99999999999997, 74, 0.33);
+}
+
+.my-btn:hover {
+  transition: 0.2s ease-in;
+  background-color: #000000;
+  border-color: #000000;
+  color: #FFFFFF !important;
 }
 
 .underliner::before {
@@ -281,14 +336,183 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  padding: 0 0 25px 0;
 }
 
 .menu-tabs__content-panel-tab-heading {
-
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #35BB4A !important;
 }
 
 .menu-tabs__content-panel-tab-content {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+}
 
+.diets-nav {
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+}
+
+.nav-link {
+  text-align: center;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #AAAAAA;
+  padding: 15px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #35BB4A;
+}
+
+/* MAP STYLING */
+
+.map-container-bcg {
+  background-size: cover !important;
+  background-position: top center !important;
+}
+
+.map-ship-area__content-table {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.map-ship-area__content-table-column {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-items: baseline;
+  max-width: 33%;
+  width: 100%;
+}
+
+.map-ship-area__content-table-column:nth-child(1) {
+  border-right: 1px solid #AAAAAA;
+}
+
+.map-ship-area__content-table-column:nth-child(2) {
+  border-right: 1px solid #AAAAAA;
+}
+
+.map-ship-area__content-table-row {
+  width: 100%;
+  border-top: 1px solid #AAAAAA;
+  padding: 15px 0 15px 0;
+}
+
+.map-ship-area__content-table-row:first-child {
+  border-top: none;
+}
+
+.map-ship-area__content-table-column:nth-child(2) > .map-ship-area__content-table-row {
+  padding: 15px 0 15px 10%;
+}
+
+.map-ship-area__content-table-column:nth-child(3) > .map-ship-area__content-table-row {
+  padding: 15px 0 15px 10%;
+}
+
+.map-svg {
+  position: relative;
+}
+
+.map-svg > img {
+  filter: drop-shadow(4px 34px 181px rgba(0, 0, 0, 0.07));
+}
+
+.map-pointers {
+  position: absolute;
+}
+
+.map-point-marker {
+  position: absolute !important;
+  width: 18px;
+  height: 18px;
+  border-radius: 15px;
+  background: #AAAAAA;
+  z-index: 9;
+  clear: both;
+}
+
+.map-point-marker:hover {
+  transition: 0.2s ease-in;
+  background: #35BB4A;
+  cursor: pointer;
+}
+
+.map-ship-area__content-cta {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.map-point > .map-point-marker > p {
+  width: 150px;
+  height: 50px;
+  background: url('http://pogotowie-diet.test/wp-content/uploads/2020/11/map-hover-point-bcg-150x50-1.svg');
+  position: absolute;
+  margin: -55px 0 0 -64px;
+  text-align: center;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 40px;
+  color: #FFFFFF;
+  z-index: 10;
+}
+
+.hover-invisible > p {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hover-visible > p {
+  transition: 0.2s ease-in;
+  visibility: visible;
+  opacity: 1;
+}
+
+.toptag {
+  font-family: "Barlow", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 10px;
+  color: #35BB4A;
+}
+
+.row-label {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.map-ship-area__content-headings > h1 {
+  margin: 20px 0 100px 0;
+}
+
+.map-ship-area__content-table {
+  margin: 0 0 100px 0;
+}
+
+.map__content {
+  display: flex;
+  justify-content: center;
 }
 
 /* MEDIA QUERIES */
